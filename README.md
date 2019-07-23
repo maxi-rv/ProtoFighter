@@ -12,5 +12,3 @@ características del género CCG. Es decir, que se mejorará la accesibilidad a 
 Fighting Game típico.
 
 Motor: Unity3D
-
-Trello Board: https://trello.com/invite/b/gmBac8ym/0e4323451b7be6a252a5cb3ed7c11e32/fighting-card-game-proto-fighter
