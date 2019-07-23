@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Background
+  - Floor
+  - Wall
+  - HurtBox
+  - HitBox
+  - Sprite
+  - CheckGround
+  - PushBox
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - HurtBox
+  - HitBox
+  - PushBox
+  - BlockBox
+  - CameraLimit
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 171967037
+    locked: 0
+  - name: Floor
+    uniqueID: 1967804475
+    locked: 0
+  - name: Players
+    uniqueID: 2595583267
+    locked: 0
+  - name: Effects
+    uniqueID: 2533879413
+    locked: 0
