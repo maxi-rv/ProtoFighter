@@ -4,37 +4,31 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public GameObject Player;
+    public List<Transform> Players;
+    public Vector3 offset;
     private float speed;
-    private Vector3 offset;
-    private  float StageLimit;
+    private Vector3 velocity;
 
     // Start is called before the first frame update
     void Awake()
     {
         speed = 0.1f;
-        StageLimit = 9f;
-
-        offset = transform.position - Player.transform.position;
     }
 
     //Late update is called after Update every frame
     void FixedUpdate()
     {
-        Vector3 playerPosition = Player.transform.position + offset;
-        Vector3 delayedPosition = Vector3.Lerp(transform.position, playerPosition, speed);
-        
-        float xpos = delayedPosition.x;
-        float xdif = 0;
+        var boundsMove = new Bounds(Players[0].position, Vector3.zero);
 
-        if (xpos > StageLimit)
-            xdif = xpos - StageLimit;
+        for (int i=0; i<Players.Count; i++)
+        {
+            boundsMove.Encapsulate(Players[i].position);
+        }
 
-        if (xpos < -StageLimit)
-            xdif = xpos + StageLimit;
+        Vector3 centerPosition = boundsMove.center;
+        Vector3 desiredPosition = centerPosition+offset;
 
-        Vector3 nullifier = new Vector3(-xdif, -(delayedPosition.y),0);
-
-        transform.position = delayedPosition + nullifier;
+        //Moves the camera
+        transform.position = Vector3.SmoothDamp(transform.position, desiredPosition, ref velocity, speed);
     }
 }

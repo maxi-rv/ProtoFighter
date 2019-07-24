@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class Player02Controller : MonoBehaviour
 {
     //COMPONENTS
     private Rigidbody2D rigidBody;
@@ -55,22 +55,22 @@ public class PlayerController : MonoBehaviour
         //VARIABLES
         life = 9;
         moveSpeed = 5f;
-        knockBack = 10f;
+        knockBack = 20f;
         isGrounded = false;
         isHurt = false;
-        isFacingRight = true;
+        isFacingRight = false;
     }
 
     void FixedUpdate()
     {
         //Checks movement input
-        float moveHorizontal = Input.GetAxisRaw("Horizontal");
-        float moveVertical = Input.GetAxisRaw("Vertical");
+        float moveHorizontal = Input.GetAxisRaw("P2Horizontal");
+        float moveVertical = Input.GetAxisRaw("P2Vertical");
 
         //Checks action input
-        bool LAButton = Input.GetButton("LightAttack");
-        bool HAButton = Input.GetButton("HeavyAttack");
-        bool blockButton = Input.GetButton("Block");
+        bool LAButton = Input.GetButton("P2LightAttack");
+        bool HAButton = Input.GetButton("P2HeavyAttack");
+        bool blockButton = Input.GetButton("P2Block");
 
         //Checks States
         bool isIdle = animator.GetBool("isIdle");
