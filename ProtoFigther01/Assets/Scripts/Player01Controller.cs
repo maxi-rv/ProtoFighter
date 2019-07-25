@@ -134,6 +134,8 @@ public class Player01Controller : MonoBehaviour
         {
             GetHurt();
         }
+        else
+        	StopHurt();
 
         //LightAttack
         if(LAButton && !onAction)

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -134,6 +134,8 @@ public class Player02Controller : MonoBehaviour
         {
             GetHurt();
         }
+        else
+            StopHurt();
 
         //LightAttack
         if(LAButton && !onAction)
@@ -217,11 +219,11 @@ public class Player02Controller : MonoBehaviour
 
     public void StopHurt()
     {
-        animator.SetBool("isHurt", false);
+            animator.SetBool("isHurt",false);
 
-        hurtBoxHigh.enabled = true;
-        hurtBoxMid.enabled = true;
-        hurtBoxLow.enabled = true;
+            hurtBoxHigh.enabled = true;
+            hurtBoxMid.enabled = true;
+            hurtBoxLow.enabled = true;
     }
 
     public void StopStartup()
