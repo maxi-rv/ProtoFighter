@@ -134,6 +134,9 @@ public class Player01Controller : MonoBehaviour
         {
             GetHurt();
         }
+        else
+        	if (animator.GetBool("IsIdle")==true)
+        		StopHurt();
 
         //LightAttack
         if(LAButton && !onAction)
