@@ -30,5 +30,4 @@ public class CheckHitAll : MonoBehaviour
         MidCheck.isHurt = false;
         LowCheck.isHurt = false;
     }
-
 }
