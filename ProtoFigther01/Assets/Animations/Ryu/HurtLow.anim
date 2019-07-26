@@ -41,23 +41,23 @@ AnimationClip:
     - time: 0
       value: {fileID: -2604593525683003169, guid: 4230a279c666f0f4aaff884d634fdfb4,
         type: 3}
-    - time: 0.16666667
+    - time: 0.125
       value: {fileID: 3077001961090731074, guid: 4230a279c666f0f4aaff884d634fdfb4,
         type: 3}
-    - time: 0.33333334
+    - time: 0.25
       value: {fileID: -7372630095252792807, guid: 4230a279c666f0f4aaff884d634fdfb4,
         type: 3}
-    - time: 0.5
+    - time: 0.375
       value: {fileID: 8912439933889366611, guid: 4230a279c666f0f4aaff884d634fdfb4,
         type: 3}
-    - time: 0.6666667
+    - time: 0.5
       value: {fileID: -8976241047977284020, guid: 4230a279c666f0f4aaff884d634fdfb4,
         type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 6
+  m_SampleRate: 8
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -89,7 +89,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.8333334
+    m_StopTime: 0.625
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -128,7 +128,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.6666667
+  - time: 0.5
     functionName: StopHurt
     data: 
     objectReferenceParameter: {fileID: 0}

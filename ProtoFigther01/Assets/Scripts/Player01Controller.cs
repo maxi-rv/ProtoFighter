@@ -55,7 +55,7 @@ public class Player01Controller : MonoBehaviour
         //VARIABLES
         life = 9;
         moveSpeed = 5f;
-        knockBack = 20f;
+        knockBack = 5000f;
         isGrounded = false;
         isHurt = false;
         isFacingRight = true;
@@ -134,9 +134,6 @@ public class Player01Controller : MonoBehaviour
         {
             GetHurt();
         }
-        else
-        	if (animator.GetBool("IsIdle")==true)
-        		StopHurt();
 
         //LightAttack
         if(LAButton && !onAction)
@@ -198,7 +195,8 @@ public class Player01Controller : MonoBehaviour
     void GetHurt()
     {
         CheckHitAllScript.SetFalse();
-        animator.SetBool("isHurt", true);
+        
+        animator.SetTrigger("isHurt");
 
         if(isFacingRight)
         {
@@ -208,7 +206,7 @@ public class Player01Controller : MonoBehaviour
         else
         {
             //rigidBody.velocity = new Vector2(knockBack, 0f);
-            rigidBody.AddForce(new Vector2(-knockBack, 0f));
+            rigidBody.AddForce(new Vector2(knockBack, 0f));
         }
 
         hurtBoxHigh.enabled = false;
@@ -220,8 +218,6 @@ public class Player01Controller : MonoBehaviour
 
     public void StopHurt()
     {
-        animator.SetBool("isHurt", false);
-
         hurtBoxHigh.enabled = true;
         hurtBoxMid.enabled = true;
         hurtBoxLow.enabled = true;
