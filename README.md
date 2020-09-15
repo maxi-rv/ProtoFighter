@@ -1,4 +1,5 @@
-# ProtoFighter
+# ProtoFighter (Abandoned)
+
 A 2D Fighting-Card game for the GameWorkJam
 
 Proto-Fighter es un 2D Fighting Game con componentes de un Collectable Cards Game (CCG).
